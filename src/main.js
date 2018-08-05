@@ -1,12 +1,11 @@
 import Vue from 'vue';
 import App from './App.vue';
 import store from './store';
-import './registerServiceWorker';
 
-import 'milligram/dist/milligram.min.css'
+import 'milligram/dist/milligram.min.css';
 
-import './themes/index.styl'
-import './themes/night/index.styl'
+import './themes/index.styl';
+import './themes/night/index.styl';
 
 Vue.config.productionTip = false;
 
