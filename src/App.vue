@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-      <welcome></welcome>
-  </div>
+  <main class="wrapper" id="app">
+      <welcome class="container"></welcome>
+  </main>
 </template>
 
 <script>
