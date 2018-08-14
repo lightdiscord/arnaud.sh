@@ -1,6 +1,6 @@
 <template>
   <main class="wrapper" id="app">
-      <welcome class="container"></welcome>
+      <welcome class="container" :bidule="'hello'"></welcome>
   </main>
 </template>
 
