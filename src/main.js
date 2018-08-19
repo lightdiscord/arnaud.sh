@@ -4,6 +4,7 @@ import store from './store';
 
 import Repositories from './components/remotes/Repositories'
 import Organizations from './components/remotes/Organizations'
+import KeySection from './components/KeySection'
 
 import VTooltip from 'v-tooltip'
 
@@ -16,6 +17,7 @@ Vue.config.productionTip = false;
 
 Vue.component(Organizations.name, Organizations)
 Vue.component(Repositories.name, Repositories)
+Vue.component(KeySection.name, KeySection)
 
 Vue.use(VTooltip)
 
@@ -24,6 +26,6 @@ new Vue({
     store,
     render: h => h(App),
     mounted () {
-        this.$store.dispatch('fetchFromGitHub')
+        this.$store.dispatch('fetchAll')
     }
 });

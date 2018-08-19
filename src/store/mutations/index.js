@@ -1,1 +1,1 @@
-export { default as storeFromGitHub } from './storeFromGitHub'
+export * from './store'
