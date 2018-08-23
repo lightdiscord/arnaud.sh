@@ -1,5 +1,8 @@
 const WebpackPwaManifest = require('webpack-pwa-manifest')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const path = require('path')
+
+const icon = path.resolve('src/assets/icon.png')
 
 const chainWebpack = config => {
     return config.module.rule('md')
@@ -20,15 +23,18 @@ const manifest = new WebpackPwaManifest({
     theme_color: '#202124',
     icons: [
         {
-            src: path.resolve('src/assets/icon.png'),
+            src: icon,
             sizes: [96, 128, 192, 256, 384, 512]
         }
     ]
 })
 
+const favicons = new FaviconsWebpackPlugin(icon)
+
 module.exports = {
     chainWebpack,
     configureWebpack: {
-        plugins: [ manifest ]
+        plugins: [ manifest, favicons ]
     }
 }
+
