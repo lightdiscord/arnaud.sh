@@ -1,6 +1,7 @@
 <template lang="pug">
     div
-        h3 Repositories
+        h3
+            code Repositories
         ul
             li(v-for='repository in repositories' :key='repository.id')
                 a(:href='repository.url') {{ namespace(repository) }}

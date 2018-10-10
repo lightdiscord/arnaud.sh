@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h2>$ ls -l ~/keys</h2>
+        <h2><code>$ ls -l ~/keys</code></h2>
 
         <blockquote>
             <span>total 42</span>
