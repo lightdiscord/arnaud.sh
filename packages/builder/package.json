@@ -21,9 +21,13 @@
     "@arnaud.sh/home": "workspace:*",
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^4.0.1",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
     "webpack": "^4.42.1"
   },
   "devDependencies": {
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   }
