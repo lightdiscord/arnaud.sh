@@ -1,3 +1,5 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 function mode() {
   return process.env.NODE_ENV === "production"
     ? "production"
@@ -16,12 +18,17 @@ module.exports = {
     rules: [
       {
         test: /\.sass$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   },
   plugins: [
     new (require("clean-webpack-plugin").CleanWebpackPlugin),
+
+    new MiniCssExtractPlugin({
+      filename: "[name].[hash].css"
+    }),
+
     new (require("html-webpack-plugin"))({
       template: require.resolve("@arnaud.sh/home/src/index.html"),
       chunks: ["home"]

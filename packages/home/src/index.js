@@ -1,3 +1,3 @@
-import './index.sass';
+import "./index.sass";
 
 console.log("Hello, world!");

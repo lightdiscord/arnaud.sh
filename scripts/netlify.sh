@@ -6,6 +6,6 @@ pnpm recursive install
 
 cd packages/builder
 
-pnpm run build
+env NODE_ENV=production pnpm run build
 
 cd -
