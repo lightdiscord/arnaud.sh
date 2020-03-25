@@ -1,4 +1,4 @@
 [build]
-publish = "src/"
-command = "echo 'nothing...'"
+publish = "packages/builder/dist/"
+command = "./scripts/netlify.sh"
 
