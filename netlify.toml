@@ -1,0 +1,4 @@
+[build]
+publish = "src/"
+command = "echo 'nothing...'"
+
