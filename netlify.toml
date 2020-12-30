@@ -1,4 +1,3 @@
 [build]
-publish = "packages/builder/dist/"
-command = "./scripts/netlify.sh"
+publish = "src/"
 
