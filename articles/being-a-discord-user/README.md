@@ -184,7 +184,7 @@ programme en interceptant ce qu'il utilise. Ou encore comment se servir d'un tra
 
 Sinon pour les dégâts de l'échantillon analysé, il cherche un moyen de persister (le code doit être
 dans le `https://evil.com/<unique id>/str` mais le domaine ayant été résilié je n'en sais pas plus).
-puis exfiltre les tokens Discord, mots de passe et cookies qu'il trouve.
+Puis il exfiltre les tokens Discord, mots de passe et cookies qu'il arrive à trouver.
 
 Il se peut que la partie résiliente fasse beaucoup plus de choses et même si ce qui est exfiltré est
 déjà critique (cookies) d'autre solutions en vente se vantent d'exfiltrer d'autres données comme des
