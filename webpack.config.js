@@ -1,36 +1,36 @@
-import fs from "fs/promises"
+import RemarkHTML from "remark-html";
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
-import CopyPlugin from "copy-webpack-plugin"
-import { marked } from "marked"
 
-import * as articleOne from "./articles/being-a-discord-user/index.js"
-
-const transformArticle = async (article) => {
-  const readme = await fs.readFile(article.readme)
-
-  return [
-    new CopyPlugin({
-      patterns: [{
-        from: article.assets.pathname,
-        to: `./articles/${article.slug}`
-      }]
-    }),
-    new HtmlWebpackPlugin({
-      template: "src/article.html",
-      filename: `articles/${article.slug}/index.html`,
-
-      body: marked(readme.toString()),
-      title: article.title
-    })
-  ]
-}
+import * as articles from "./articles/index.js"
 
 export default (async () => ({
   mode: "development",
 
+  entry: ["./src/style.css"],
+
+  output: {
+    clean: true
+  },
+
   module: {
     rules: [
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader",
+          },
+          {
+            loader: "remark-loader",
+            options: {
+              remarkOptions: {
+                plugins: [RemarkHTML],
+              },
+            },
+          },
+        ],
+      },
       {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
@@ -43,6 +43,10 @@ export default (async () => ({
     new HtmlWebpackPlugin({
       template: "src/home.html",
     }),
-    ...(await transformArticle(articleOne))
+    ...Object.values(articles).map((article) => new HtmlWebpackPlugin({
+      template: "src/article.html",
+      filename: `articles/${article.slug}/index.html`,
+      article
+    }))
   ]
 }))()

@@ -5,8 +5,7 @@ body {
   margin: auto;
   background-color: rgb(24 24 27);
   color: rgb(245 245 245);
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -67,7 +66,7 @@ div.background {
   opacity: .5;
   width: 100%;
   height: 100%;
-  background-image: url("../articles/being-a-discord-user/assets/images/06-deobfuscated-zero.png");
+  background-image: url("../articles/being-a-discord-user/images/06-deobfuscated-zero.png");
   background-size: cover;
   background-position: center;
 }

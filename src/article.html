@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>arnaud.sh - <%= htmlWebpackPlugin.options.title %></title>
+  <title>arnaud.sh - <%= htmlWebpackPlugin.options.article.title %></title>
 </head>
 <body>
-  <%= htmlWebpackPlugin.options.body %>
+  <a href="/">Retour</a>
+  <%= require(`/tmp/tmp.kERjTarfgy/arnaud.sh/articles/being-a-discord-user/README.md`).default %>
 </body>
 </html>
