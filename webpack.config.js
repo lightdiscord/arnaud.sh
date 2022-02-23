@@ -10,7 +10,8 @@ export default (async () => ({
   entry: ["./src/style.css"],
 
   output: {
-    clean: true
+    clean: true,
+    publicPath: "/"
   },
 
   module: {
