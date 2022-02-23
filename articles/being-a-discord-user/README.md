@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Une des meilleures façon d'être au courant des nouvelles sorties de jeux indés est de rejoindre
+Une des meilleures façons d'être au courant des nouvelles sorties de jeux indés est de rejoindre
 plusieurs serveurs Discord publics (pas forcément liés aux jeux vidéo). Avec un peu de chance, vous
 recevrez le message privé de quelqu'un qui,
 [pour un projet d'école](./images/00-for-school-project.png) ou juste 
