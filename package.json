@@ -4,7 +4,7 @@
   "description": "The website for arnaud.sh",
   "type": "module",
   "scripts": {
-    "build": "webpack build",
+    "build": "webpack build --mode production",
     "serve": "webpack serve"
   },
   "repository": {
