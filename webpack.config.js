@@ -20,7 +20,8 @@ const transformArticle = async (article) => {
       template: "src/article.html",
       filename: `articles/${article.slug}/index.html`,
 
-      body: marked(readme.toString())
+      body: marked(readme.toString()),
+      title: article.title
     })
   ]
 }
@@ -39,6 +40,9 @@ export default (async () => ({
 
   plugins: [
     new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: "src/home.html",
+    }),
     ...(await transformArticle(articleOne))
   ]
 }))()
