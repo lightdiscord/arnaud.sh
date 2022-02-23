@@ -1,0 +1,34 @@
+@import url('http://fonts.cdnfonts.com/css/roboto');
+
+body {
+  max-width: 800px;
+  margin: auto;
+  text-align: justify;
+  background-color: rgb(24 24 27);
+  color: rgb(245 245 245);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+  color: rgb(239 68 68);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(220 38 38);
+}
+
+a:hover {
+  color: rgb(185 28 28);
+}
+
+code {
+  padding: 0.25rem;
+  background-color: rgb(39 39 42);
+}
+
+img {
+  width: 100%;
+}
