@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="<%= htmlWebpackPlugin.options.article.title %>">
+  <meta property="og:image" content="<%= require(`../articles/${htmlWebpackPlugin.options.article.slug}/${htmlWebpackPlugin.options.article.cover}`) %>">
+  <meta property="og:description" content="<%= htmlWebpackPlugin.options.article.description %>">
+  <meta property="article:author" content="LightDiscord">
+  <meta property="twitter:card" content="summary_large_image" />
+
   <title>arnaud.sh - <%= htmlWebpackPlugin.options.article.title %></title>
 </head>
 <body>

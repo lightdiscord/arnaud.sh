@@ -16,6 +16,10 @@ export default (async () => ({
   module: {
     rules: [
       {
+        test: /\.png$/,
+        type: "asset/resource"
+      },
+      {
         test: /\.md$/,
         use: [
           {
@@ -47,7 +51,7 @@ export default (async () => ({
         ],
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
