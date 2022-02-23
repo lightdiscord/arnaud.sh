@@ -12,7 +12,7 @@
 
   <title>arnaud.sh - <%= htmlWebpackPlugin.options.article.title %></title>
 </head>
-<body>
+<body class="article">
   <a href="/">Retour</a>
   <%= require(`../articles/${htmlWebpackPlugin.options.article.slug}/README.md`).default %>
 </body>

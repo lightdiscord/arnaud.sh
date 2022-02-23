@@ -62,6 +62,7 @@ export default (async () => ({
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: "src/home.html",
+      articles: Object.values(articles)
     }),
     ...Object.values(articles).map((article) => new HtmlWebpackPlugin({
       template: "src/article.html",
