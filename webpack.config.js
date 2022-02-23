@@ -1,4 +1,4 @@
-import RemarkHTML from "remark-html";
+import RemarkHTML from "remark-html"
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 
@@ -20,6 +20,21 @@ export default (async () => ({
         use: [
           {
             loader: "html-loader",
+            options: {
+              sources: {
+                list: [
+                  "...",
+                  {
+                    tag: "a",
+                    attribute: "href",
+                    type: "src",
+                    filter: (tag, attribute, [{ value }], resourcePath) => {
+                      return /^\.\//.test(value)
+                    }
+                  }
+                ]
+              }
+            }
           },
           {
             loader: "remark-loader",
