@@ -3,7 +3,6 @@
 body {
   max-width: 800px;
   margin: auto;
-  text-align: justify;
   background-color: rgb(24 24 27);
   color: rgb(245 245 245);
   padding-left: 1rem;
@@ -25,8 +24,11 @@ a:hover {
 }
 
 code {
-  padding: 0.25rem;
+  font-size: 0.75rem;
+  text-align: start;
+  padding: 0.125rem;
   background-color: rgb(39 39 42);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 img {
@@ -68,4 +70,8 @@ div.background {
   background-image: url("../articles/being-a-discord-user/assets/images/06-deobfuscated-zero.png");
   background-size: cover;
   background-position: center;
+}
+
+p {
+  text-align: justify;
 }
