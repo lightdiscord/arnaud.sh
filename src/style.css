@@ -80,6 +80,7 @@ a.card {
   background-image: url("../articles/being-a-discord-user/images/06-deobfuscated-zero.png");
   background-size: cover;
   background-position: center;
+  filter: blur(2px);
 }
 
 body.article p {
