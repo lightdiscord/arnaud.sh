@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
 body {
@@ -74,6 +79,10 @@ a.card {
   padding: 0.5rem;
 }
 
+//bg-gradient-to-r from-violet-500 to-fuchsia-500
+              <div class="-z-10 absolute w-full h-full" style='background-image: url(<%= require("../articles/discord-malware-analysis/images/06-deobfuscated-zero.png") %>)'></div>
+*/
+/*
 .card-background {
   position: absolute;
   z-index: -1;
@@ -85,6 +94,8 @@ a.card {
   background-position: center;
   filter: blur(2px);
 }
+*/
+/*
 
 body.article {
   font-size: 1rem;
@@ -111,4 +122,33 @@ header {
 
 p {
   margin: 1rem 0;
+}
+*/
+
+article h1 {
+  @apply text-3xl font-bold mb-8;
+}
+
+article h2 {
+  @apply text-2xl font-bold mb-4 mt-4;
+}
+
+article h3 {
+  @apply text-xl font-bold mb-2 mt-2;
+}
+
+article p {
+  @apply mb-2 mt-2;
+}
+
+article img {
+  @apply w-full;
+}
+
+article code {
+  @apply font-mono bg-gray-300 p-px;
+}
+
+article a {
+  @apply text-purple-700 hover:underline;
 }

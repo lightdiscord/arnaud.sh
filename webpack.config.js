@@ -53,7 +53,18 @@ export default (async () => ({
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["tailwindcss", "autoprefixer"]
+              }
+            }
+          }
+        ],
       },
     ],
   },

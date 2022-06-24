@@ -13,10 +13,10 @@
   <title>arnaud.sh - <%= htmlWebpackPlugin.options.article.title %></title>
 </head>
 <body class="article">
-  <header>
-    <a href="/">Retour</a>
+  <header class="container mx-auto px-4 py-2">
+    <a class="text-purple-700 hover:underline" href="/">Go back</a>
   </header>
-  <main>
+  <main class="container mx-auto p-4">
     <article>
       <%= require(`../articles/${htmlWebpackPlugin.options.article.slug}/README.md`).default %>
     </article>
