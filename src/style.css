@@ -80,7 +80,7 @@ a.card {
   opacity: .5;
   width: 100%;
   height: 100%;
-  background-image: url("../articles/being-a-discord-user/images/06-deobfuscated-zero.png");
+  background-image: url("../articles/discord-malware-analysis/images/06-deobfuscated-zero.png");
   background-size: cover;
   background-position: center;
   filter: blur(2px);

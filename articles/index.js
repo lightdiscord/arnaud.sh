@@ -1,1 +1,1 @@
-export * as one from "./being-a-discord-user/index.js"
+export * as one from "./discord-malware-analysis/index.js"
