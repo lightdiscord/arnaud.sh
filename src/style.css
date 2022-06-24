@@ -29,3 +29,7 @@ article code {
 article a {
   @apply text-purple-700 hover:underline;
 }
+
+article ul {
+  @apply list-disc list-inside;
+}
