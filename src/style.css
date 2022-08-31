@@ -26,10 +26,10 @@ article code {
   @apply font-mono bg-gray-300 p-px;
 }
 
-article a {
-  @apply text-purple-700 hover:underline;
-}
-
 article ul {
   @apply list-disc list-inside;
+}
+
+a {
+  @apply text-purple-500 hover:underline;
 }
