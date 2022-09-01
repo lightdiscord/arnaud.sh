@@ -30,6 +30,10 @@ article ul {
   @apply list-disc list-inside;
 }
 
+:not(h1, h2, h3, h4, h5, h6) > a {
+  @apply text-purple-500;
+}
+
 a {
-  @apply text-purple-500 hover:underline;
+  @apply hover:underline;
 }
