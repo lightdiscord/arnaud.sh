@@ -36,12 +36,12 @@ function remarkHeading() {
 }
 
 export default (async () => ({
-  mode: "development",
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
 
   entry: ["./src/style.css"],
 
   output: {
-    clean: true,
+    clean: process.env.NODE_ENV === "production",
     publicPath: "/"
   },
 

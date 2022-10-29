@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-article h1 {
+h1 {
   @apply text-3xl font-bold mb-8;
 }
 
-article h2 {
+h2 {
   @apply text-2xl font-bold mb-4 mt-4;
 }
 
-article h3 {
+h3 {
   @apply text-xl font-bold mb-2 mt-2;
 }
 
 article p {
-  @apply mb-2 mt-2;
+  @apply my-2 text-justify;
 }
 
 article img {
@@ -23,7 +23,7 @@ article img {
 }
 
 article code {
-  @apply font-mono bg-gray-300 p-px;
+  @apply font-mono dark:bg-zinc-900 text-sm py-0.5 px-1;
 }
 
 article ul {
@@ -31,9 +31,17 @@ article ul {
 }
 
 :not(h1, h2, h3, h4, h5, h6) > a {
-  @apply text-purple-500;
+  @apply text-violet-400;
 }
 
 a {
   @apply hover:underline;
+}
+
+body {
+  @apply dark:bg-black dark:text-white;
+}
+
+header {
+  @apply dark:bg-zinc-900;
 }
