@@ -107,11 +107,11 @@ export default (async () => ({
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      template: "src/home.html",
+      template: "src/templates/home.ejs",
       articles: Object.values(articles)
     }),
     ...Object.values(articles).map((article) => new HtmlWebpackPlugin({
-      template: "src/article.html",
+      template: "src/templates/article.ejs",
       filename: `articles/${article.slug}/index.html`,
       article
     }))

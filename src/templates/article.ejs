@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:type" content="article">
   <meta property="og:title" content="<%= htmlWebpackPlugin.options.article.title %>">
-  <meta property="og:image" content="<%= require(`../articles/${htmlWebpackPlugin.options.article.slug}/${htmlWebpackPlugin.options.article.cover}`) %>">
+  <meta property="og:image" content="<%= require(`../../articles/${htmlWebpackPlugin.options.article.slug}/${htmlWebpackPlugin.options.article.cover}`) %>">
   <meta property="og:description" content="<%= htmlWebpackPlugin.options.article.description %>">
   <meta property="article:author" content="LightDiscord">
   <meta property="twitter:card" content="summary_large_image" />
@@ -20,7 +20,7 @@
   </header>
   <main class="container mx-auto p-4">
     <article>
-      <%= require(`../articles/${htmlWebpackPlugin.options.article.slug}/README.md`).default %>
+      <%= require(`../../articles/${htmlWebpackPlugin.options.article.slug}/README.md`).default %>
     </article>
   </main>
 </body>
