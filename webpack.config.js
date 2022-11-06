@@ -42,7 +42,8 @@ export default (async () => ({
 
   output: {
     clean: process.env.NODE_ENV === "production",
-    publicPath: "/"
+    publicPath: "/",
+    assetModuleFilename: 'assets/[name].[contenthash][ext]'
   },
 
   module: {

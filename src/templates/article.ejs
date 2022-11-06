@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+<% const { article } = htmlWebpackPlugin.options %>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="<%= htmlWebpackPlugin.options.article.title %>">
-  <meta property="og:image" content="<%= require(`../../articles/${htmlWebpackPlugin.options.article.slug}/${htmlWebpackPlugin.options.article.cover}`) %>">
-  <meta property="og:description" content="<%= htmlWebpackPlugin.options.article.description %>">
-  <meta property="article:author" content="LightDiscord">
-  <meta property="twitter:card" content="summary_large_image" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="<%= article.title %>">
+    <meta property="og:image" content="<%= require(`../../articles/${article.slug}/${article.cover}`) %>">
+    <meta property="og:description" content="<%= article.description %>">
+    <meta property="article:author" content="LightDiscord">
+    <meta property="twitter:card" content="summary_large_image" />
 
-  <title>arnaud.sh - <%= htmlWebpackPlugin.options.article.title %></title>
+    <title>arnaud.sh - <%= article.title %>
+    </title>
 </head>
+
 <body>
   <header class="py-2">
     <div class="container mx-auto px-4">
@@ -20,8 +23,9 @@
   </header>
   <main class="container mx-auto p-4">
     <article>
-      <%= require(`../../articles/${htmlWebpackPlugin.options.article.slug}/README.md`).default %>
+      <%= require(`../../articles/${article.slug}/README.md`).default %>
     </article>
   </main>
 </body>
+
 </html>
