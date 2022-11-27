@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply dark:bg-black dark:text-white;
+}
+
+header {
+    @apply dark:bg-zinc-900 px-4 py-16;
+}
+
+.page-article header {
+    @apply bg-gradient-to-r from-violet-700 to-fuchsia-500;
+}
+
+h1 {
+    @apply text-4xl;
+}
+
+main {
+    @apply p-4;
+}
+
+a {
+    @apply underline text-purple-500 hover:text-purple-600;
+}
+
+.content h1 {
+    @apply text-3xl font-bold mb-8;
+}
+
+.content h2 {
+    @apply text-2xl font-bold mb-4 mt-4;
+}
+
+.content h3 {
+    @apply text-xl font-bold mb-2 mt-2;
+}
+
+.content p {
+    @apply my-2 text-justify;
+}
+
+.content img {
+    @apply my-4;
+}
+
+.content code {
+    @apply font-mono dark:bg-zinc-900 text-sm py-0.5 px-1;
+}
+
+.content ul {
+    @apply list-disc list-inside;
+}
