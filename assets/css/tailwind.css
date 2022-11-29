@@ -6,10 +6,6 @@ body {
     @apply dark:bg-black dark:text-white;
 }
 
-header {
-    @apply dark:bg-zinc-900 px-4 py-16;
-}
-
 .page-article header {
     @apply bg-gradient-to-r from-violet-700 to-fuchsia-500;
 }
@@ -18,8 +14,16 @@ h1 {
     @apply text-4xl;
 }
 
-main {
+main, header {
     @apply p-4;
+}
+
+header {
+    @apply dark:bg-zinc-900 py-16;
+}
+
+nav {
+    @apply py-2 px-4;
 }
 
 a {
@@ -52,4 +56,8 @@ a {
 
 .content ul {
     @apply list-disc list-inside;
+}
+
+.my-container {
+    @apply container mx-auto xl:px-64;
 }

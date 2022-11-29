@@ -19,13 +19,13 @@ tags: notes
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
 </head>
 <body class="page-article">
-    <nav class="container mx-auto lg:px-16 xl:px-48">
-        <ul class="py-2">
+    <nav>
+        <ul class="my-container">
             <li><a href="/">Go back</a></li>
         </ul>
     </nav>
     <header>
-        <div class="container mx-auto lg:px-16 xl:px-48">
+        <div class="my-container">
             <hgroup>
                 <h1>{{title}}</h1>
                 <p>{{description}}</p>
@@ -33,7 +33,7 @@ tags: notes
         </div>
     </header>
     <main>
-        <div class="container mx-auto lg:px-16 xl:px-48">
+        <div class="my-container">
             <div class="content">
                 {{ content | safe }}
             </div>
