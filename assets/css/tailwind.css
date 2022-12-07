@@ -51,7 +51,7 @@ a {
 }
 
 .content code {
-    @apply font-mono dark:bg-zinc-900 text-sm py-0.5 px-1;
+    @apply font-mono text-sm;
 }
 
 .content ul {
@@ -60,4 +60,12 @@ a {
 
 .my-container {
     @apply container mx-auto xl:px-64;
+}
+
+pre > code {
+    @apply font-mono;
+}
+
+:not(pre) > code {
+    @apply dark:bg-zinc-900 py-0.5 px-1;
 }
