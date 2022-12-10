@@ -1,7 +1,11 @@
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight/src/markdownSyntaxHighlightOptions");
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPlugin(syntaxHighlight)
+    const configuredSyntaxHighlight = syntaxHighlight({})
+
+    eleventyConfig.addMarkdownHighlighter((str, language) => {
+        return configuredSyntaxHighlight(str, language || "text")
+    })
 
     eleventyConfig.addPassthroughCopy("notes/**/*.png")
     eleventyConfig.addPassthroughCopy({
