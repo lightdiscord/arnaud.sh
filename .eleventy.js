@@ -6,6 +6,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addMarkdownHighlighter((str, language) => {
         return configuredSyntaxHighlight(str, language || "text")
     })
+    
+    eleventyConfig.ignores.add("components")
 
     eleventyConfig.addPassthroughCopy("notes/**/*.png")
     eleventyConfig.addPassthroughCopy({

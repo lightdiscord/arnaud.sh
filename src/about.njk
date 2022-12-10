@@ -1,3 +1,6 @@
+---
+permalink: "index.html"
+---
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -7,22 +10,22 @@
     <title>arnaud.sh</title>
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
 </head>
-<body>
-    <header>
-        <div class="my-container">
-            <h1>
-                Arnaud <span class="text-2xl text-gray-400">lightdiscord</span>
-            </h1>
-            <p>
-                I'm a student learning programming, hacking and <a rel="me" href="https://infosec.exchange/@lightdiscord">mastodon</a>. Some of my work is
-                available on my <a href="https://github.com/LightDiscord">GitHub</a>.
-                I'm also enjoying CTF challenges and doing some on 
-                <a href="https://www.root-me.org/LightDiscord">root-me</a>.
-            </p>
-        </div>
+<body class="container">
+    <header class="py-16">
+        <h1 class="pb-2">About</h1>
+
+        {% include "components/navbar.njk" %}
     </header>
     <main>
-        <div class="my-container">
+        <p>
+            I'm Arnaud (also known as <span class="italic">LightDiscord</span>) and I'm a student
+            learning programming and hacking. Some of my work is available on
+            <a href="https://github.com/LightDiscord">GitHub</a> and I write notes here when I'm
+            really motivated. Otherwise I'm enjoying CTF challenges on site such as
+            <a href="https://www.root-me.org/LightDiscord">root-me</a> or reading messages on
+            <a rel="me" href="https://infosec.exchange/@lightdiscord">mastodon</a>.
+        </p>
+        <!-- <div class="my-container">
             <h2 class="text-2xl">My notes</h2>
             <div class="mt-4 flex flex-col gap-y-6">
             {%- for note in collections.notes -%}
@@ -35,7 +38,7 @@
             </div>
             {%- endfor -%}
             </div>
-        </div>
+        </div> -->
     </main>
 </body>
 </html>

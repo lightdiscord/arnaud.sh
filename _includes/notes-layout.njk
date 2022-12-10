@@ -19,18 +19,19 @@ tags: notes
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/prism-vsc-dark-plus.css' | url }}">
 </head>
-<body class="page-article">
-    <nav>
-        <ul class="my-container">
-            <li><a href="/">Go back</a></li>
-        </ul>
-    </nav>
+<body class="container page-article">
+    <header class="py-16">
+        <hgroup class="pb-2">
+            <h1>{{title}}</h1>
+            <p>{{description}}</p>
+        </hgroup>
+
+        <nav>
+            <a href="/notes">Go back to notes</a>
+        </nav>
+    </header>
     <header>
         <div class="my-container">
-            <hgroup>
-                <h1>{{title}}</h1>
-                <p>{{description}}</p>
-            </hgroup>
         </div>
     </header>
     <main>

@@ -1,0 +1,31 @@
+---
+permalink: "notes/index.html"
+---
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arnaud.sh</title>
+    <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
+</head>
+<body class="container">
+    <header class="py-16">
+        <h1 class="pb-2">Notes</h1>
+
+        {% include "components/navbar.njk" %}
+    </header>
+    <main class="flex flex-col gap-6">
+        {%- for note in collections.notes -%}
+        <div>
+            <p class="font-bold">{{ note.data.title }}</p>
+            <p>{{ note.data.description }}</p>
+            <a href="{{ note.url }}">
+                See article
+            </a>
+        </div>
+        {%- endfor -%}
+    </main>
+</body>
+</html>
