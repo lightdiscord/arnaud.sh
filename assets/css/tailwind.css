@@ -1,57 +1,9 @@
 @import "tailwindcss";
+@plugin '@tailwindcss/typography';
 
-body {
-    @apply dark:bg-black dark:text-white p-4;
-}
-
-header h1 {
-    @apply text-3xl;
-}
-
-nav a {
-    @apply text-zinc-500 hover:text-zinc-700;
-}
-
-a {
-    @apply underline text-purple-500 hover:text-purple-600;
-}
-
-.content h1 {
-    @apply text-3xl font-bold mb-8;
-}
-
-.content h2 {
-    @apply text-2xl font-bold mb-4 mt-4;
-}
-
-.content h3 {
-    @apply text-xl font-bold mb-2 mt-2;
-}
-
-.content p {
-    @apply text-justify my-4;
-}
-
-.content img {
-    @apply my-4;
-}
-
-.content code {
-    @apply font-mono text-sm;
-}
-
-.content ul {
-    @apply list-disc list-inside;
-}
-
-.container {
-    @apply mx-auto xl:px-64;
-}
-
-pre > code {
-    @apply font-mono;
-}
-
-:not(pre) > code {
-    @apply dark:bg-zinc-900 py-0.5 px-1;
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 40rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 64rem;
 }

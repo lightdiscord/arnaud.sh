@@ -10,35 +10,33 @@ permalink: "index.html"
     <title>arnaud.sh</title>
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
 </head>
-<body class="container">
-    <header class="py-16">
-        <h1 class="pb-2">About</h1>
+<body class="bg-zinc-950 text-zinc-50 flex flex-col min-h-screen font-sans">
+    <div class="border-b-2 border-zinc-800">
+        <nav class="container mx-auto border-x-2 border-zinc-800 py-8 px-8">
+            <ol class="uppercase flex gap-4">
+                <li><a class="bg-zinc-900 hover:bg-zinc-900 px-4 py-2" href="/" >Home</a></li>
+                <li><a class="bg-zinc-800 hover:bg-zinc-900 px-4 py-2" href="/notes">Notes</a></li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container mx-auto border-x-2 border-zinc-800 p-8 grow">
+        <main class="flex flex-col gap-8">
+            <p class="text-justify">
+                I'm Arnaud and I'm a security hacker finding bugs in all kind of things. Some of the tooling and 
+                fun projects I made are available on GitHub. My free time is shared between video games, watching 
+                medias and lurking social networks. When the stars align, I also do CTF challenges or participate
+                in events.
+            </p>
 
-        {% include "components/navbar.njk" %}
-    </header>
-    <main>
-        <p>
-            I'm Arnaud (also known as <span class="italic">LightDiscord</span>) and I'm a student
-            learning programming and hacking. Some of my work is available on
-            <a href="https://github.com/LightDiscord">GitHub</a> and I write notes here when I'm
-            really motivated. Otherwise I'm enjoying CTF challenges on site such as
-            <a href="https://www.root-me.org/LightDiscord">root-me</a> or reading messages on
-            <a rel="me" href="https://infosec.exchange/@lightdiscord">mastodon</a>.
-        </p>
-        <!-- <div class="my-container">
-            <h2 class="text-2xl">My notes</h2>
-            <div class="mt-4 flex flex-col gap-y-6">
-            {%- for note in collections.notes -%}
-            <div>
-                <p class="font-bold">{{ note.data.title }}</p>
-                <p>{{ note.data.description }}</p>
-                <a href="{{ note.url }}">
-                    See article
-                </a>
-            </div>
-            {%- endfor -%}
-            </div>
-        </div> -->
-    </main>
+            <ul class="grid grid-cols-1 tablet:grid-cols-4 gap-4 content-stretch content-stretch text-center">
+                <li><a class="block bg-zinc-800 hover:bg-zinc-900 px-4 py-2" href="https://github.com/LightDiscord">GitHub</a></li>
+                <li><a class="block bg-zinc-800 hover:bg-zinc-900 px-4 py-2" href="https://www.root-me.org/arnaud-sh">Root Me</a></li>
+                <li><a class="block bg-zinc-800 hover:bg-zinc-900 px-4 py-2" rel="me" href="https://infosec.exchange/@lightdiscord">Mastodon</a></li>
+                <li><a class="block bg-zinc-800 hover:bg-zinc-900 px-4 py-2" href="https://www.linkedin.com/in/8guucafu8hfopxu7bt3i3xyoe2pljvb3">Linkedin</a></li>
+                <li><a class="block bg-zinc-800 hover:bg-zinc-900 px-4 py-2" href="https://steamcommunity.com/id/LightDiscord">Steam</a></li>
+                <li><a class="block bg-zinc-800 hover:bg-zinc-900 px-4 py-2" href="https://anilist.co/user/lightdiscord/">AniList</a></li>
+            </ul>
+        </main>
+    </div>
 </body>
 </html>
